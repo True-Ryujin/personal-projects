@@ -1,0 +1,43 @@
+
+<%- include("partials/header") -%>
+
+<main class="content">
+    <section class="dashboard">
+        <div class="card">
+          <h2>Humidity</h2>
+          <div class="meter">
+            <div class="indicator humidity">
+              <span><%=H.value%></span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <h2>Gas Level</h2>
+          <div class="meter">
+            <div class="indicator gas-level" >
+              <span><%=G.value%></span>
+            </div>
+          </div>
+        </div>
+      
+        <div class="card">
+          <h2>Temperature</h2>
+          <div class="meter">
+            <div class="indicator temperature" >
+              <span><%=T.value%></span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h2>Movement</h2>
+          <div class="meter">
+            <div class="indicator temperature" >
+              <span><%= new Date(M.timestamp).toLocaleString() %></span>
+            </div>
+          </div>
+        </div>
+      </section>
+  </main>
+</div>
+<%- include("partials/footer") -%>

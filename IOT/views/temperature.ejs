@@ -1,0 +1,41 @@
+<%- include("partials/header") -%>
+
+<canvas id="myChart" width="400" height="200"></canvas>
+
+<script>
+  // Pass the data from EJS into JavaScript variables
+  const data = <%- JSON.stringify(Tdata) %>;
+
+  // Parse the data for Chart.js
+  const timestamps = data.map(entry => new Date(entry.timestamp).toLocaleTimeString());
+  const values = data.map(entry => entry.value);
+
+  // Create the chart
+  const ctx = document.getElementById('myChart').getContext('2d');
+  const myChart = new Chart(ctx, {
+    type: 'line', // Type of chart
+    data: {
+      labels: timestamps,
+      datasets: [{
+        label: 'Temperature',
+        data: values,
+        borderColor: 'rgba(75, 192, 192, 1)',
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        fill: true
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+</script>
+
+<%- include("partials/footer") -%>

@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    background-color: #2A3F54;
+    color: white;
+    width: 250px;
+    padding: 20px;
+  }
+  
+  .sidebar .user-info {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar .user-avatar {
+    border-radius: 50%;
+    width: 50px;
+  }
+  
+  .sidebar .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar .menu li {
+    margin: 15px 0;
+  }
+  
+  .sidebar .menu a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+  }
+  
+  .sidebar .menu .active a {
+    background-color: #1ABB9C;
+  }
+  
+  .sidebar .menu .has-submenu {
+    cursor: pointer;
+  }
+  
+  .sidebar .menu .submenu {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 10px;
+    display: none; /* Initially hidden */
+  }
+  
+  .sidebar .menu .submenu li {
+    margin: 10px 0;
+  }
+  
+  .sidebar .menu .submenu a {
+    padding: 5px;
+    background-color: #34495E;
+    border-radius: 4px;
+  }
+  
+  .content {
+    flex: 1;
+    background-color: #F7F7F7;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navbar {
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .title {
+    font-size: 20px;
+  }
+  
+  .navbar .user-options {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar .notifications {
+    margin-right: 20px;
+  }
+  
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.card p {
+    font-size: 18px;
+    margin: 0;
+    color: #333;
+}
